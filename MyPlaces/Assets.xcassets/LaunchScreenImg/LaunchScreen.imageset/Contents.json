@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Kafeterija.png",
+      "filename" : "LaunchScreen@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Kafeterija@2x.png",
+      "filename" : "LaunchScreen@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Kafeterija@3x.png",
+      "filename" : "LaunchScreen@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

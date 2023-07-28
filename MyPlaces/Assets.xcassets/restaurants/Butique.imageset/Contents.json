@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Butik.jpg",
+      "filename" : "Butique.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Butik@2x.jpg",
+      "filename" : "Butique@2x.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Butik@3x.jpg",
+      "filename" : "Butique@3x.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
