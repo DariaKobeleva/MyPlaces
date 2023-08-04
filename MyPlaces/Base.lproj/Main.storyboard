@@ -1,27 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZTw-6H-FZV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MyPlaces -->
+        <!--My Places -->
         <scene sceneID="FDn-kX-G5h">
             <objects>
                 <tableViewController id="fmw-MB-62y" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Lwo-8Y-Ixj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Lwo-8Y-Ixj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wl7-xh-jH7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wl7-xh-jH7" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wl7-xh-jH7" id="1T5-Xg-Ghx">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajd-EW-zjU">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="8v0-YA-nsu"/>
+                                                <constraint firstAttribute="height" constant="65" id="x6K-pb-BTe"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMM-jf-V5t">
+                                            <rect key="frame" x="95" y="9" width="282" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="kTe-uM-YII"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-6O-cd0">
+                                            <rect key="frame" x="95" y="35" width="294" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="Oxy-Cf-sV4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJv-7X-5FA">
+                                            <rect key="frame" x="95" y="54" width="282" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="TId-W8-vNb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FJv-7X-5FA" firstAttribute="top" secondItem="dAd-6O-cd0" secondAttribute="bottom" constant="1" id="2jj-26-lse"/>
+                                        <constraint firstAttribute="trailing" secondItem="FJv-7X-5FA" secondAttribute="trailing" constant="16" id="7bH-2c-ghv"/>
+                                        <constraint firstAttribute="bottom" secondItem="FJv-7X-5FA" secondAttribute="bottom" constant="10" id="AAY-Re-ztk"/>
+                                        <constraint firstItem="dAd-6O-cd0" firstAttribute="trailing" secondItem="1T5-Xg-Ghx" secondAttribute="trailingMargin" constant="16" id="JEW-dW-0Xh"/>
+                                        <constraint firstItem="dAd-6O-cd0" firstAttribute="leading" secondItem="ajd-EW-zjU" secondAttribute="trailing" constant="15" id="aXM-Dt-RBp"/>
+                                        <constraint firstItem="SMM-jf-V5t" firstAttribute="top" secondItem="1T5-Xg-Ghx" secondAttribute="top" constant="9" id="b2P-v9-hLk"/>
+                                        <constraint firstItem="dAd-6O-cd0" firstAttribute="top" secondItem="SMM-jf-V5t" secondAttribute="bottom" constant="5" id="d0H-fC-Knw"/>
+                                        <constraint firstAttribute="trailing" secondItem="SMM-jf-V5t" secondAttribute="trailing" constant="16" id="gMr-yw-XAl"/>
+                                        <constraint firstItem="FJv-7X-5FA" firstAttribute="leading" secondItem="ajd-EW-zjU" secondAttribute="trailing" constant="15" id="lzi-ml-z8X"/>
+                                        <constraint firstItem="SMM-jf-V5t" firstAttribute="leading" secondItem="ajd-EW-zjU" secondAttribute="trailing" constant="15" id="qAB-AE-QEC"/>
+                                        <constraint firstItem="ajd-EW-zjU" firstAttribute="centerY" secondItem="1T5-Xg-Ghx" secondAttribute="centerY" id="qpQ-tG-92h"/>
+                                        <constraint firstItem="ajd-EW-zjU" firstAttribute="leading" secondItem="1T5-Xg-Ghx" secondAttribute="leading" constant="15" id="ywr-tz-TpI"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="ajd-EW-zjU" id="e3J-ve-gvb"/>
+                                    <outlet property="locationLabel" destination="dAd-6O-cd0" id="btj-Dj-jCm"/>
+                                    <outlet property="nameLabel" destination="SMM-jf-V5t" id="jfO-gP-WaY"/>
+                                    <outlet property="typeLabel" destination="FJv-7X-5FA" id="9LN-kf-S3h"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,11 +86,11 @@
                             <outlet property="delegate" destination="fmw-MB-62y" id="TbV-Gu-Nyh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MyPlaces " id="UGe-yi-ygf"/>
+                    <navigationItem key="navigationItem" title="My Places " id="UGe-yi-ygf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htb-LL-w3G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="-21"/>
+            <point key="canvasLocation" x="461.83206106870227" y="-21.126760563380284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cny-YB-DeW">
@@ -43,7 +100,7 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
