@@ -157,11 +157,16 @@
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-DI-sLr" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2Hn-DI-sLr" firstAttribute="centerY" secondItem="bjl-hX-rNR" secondAttribute="centerY" id="0sn-xT-6fQ"/>
-                                                <constraint firstItem="2Hn-DI-sLr" firstAttribute="centerX" secondItem="bjl-hX-rNR" secondAttribute="centerX" id="Ofj-Uk-o8v"/>
+                                                <constraint firstItem="2Hn-DI-sLr" firstAttribute="centerY" secondItem="bjl-hX-rNR" secondAttribute="centerY" id="4ds-Id-j30"/>
+                                                <constraint firstItem="2Hn-DI-sLr" firstAttribute="centerX" secondItem="bjl-hX-rNR" secondAttribute="centerX" id="gcd-np-tUP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

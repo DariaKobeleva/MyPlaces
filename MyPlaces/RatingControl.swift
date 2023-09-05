@@ -13,6 +13,18 @@ import UIKit
     
     private  var ratingButtons = [UIButton]()
     
+    @IBInspectable var starSizes: CGSize = CGSize(width: 44.0, height: 44.0) {
+        didSet {
+            setupButtons()
+        }
+    }
+    
+    @IBInspectable var starCount: Int = 5 {
+        didSet {
+            setupButtons()
+        }
+    }
+    
     var rating = 0
     
     //MARK: Initialization
@@ -30,14 +42,21 @@ import UIKit
     //MARK: Button Action
     
     @objc func retingButtonTapped(button: UIButton) {
-        print("Button pressed 😻")
+        print("Button pressed")
     }
     
     //MARK: Private Methods
     
     private func setupButtons() {
         
-        for _ in 1...5 {
+        for button in ratingButtons {
+            removeArrangedSubview(button)
+            button.removeFromSuperview()
+        }
+        
+        ratingButtons.removeAll()
+         
+        for _ in 0 ..< starCount {
             
         //Create the button
             let button = UIButton()
@@ -45,8 +64,8 @@ import UIKit
             
         //Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-            button.widthAnchor.constraint(equalToConstant: 44.0).isActive = true
+            button.heightAnchor.constraint(equalToConstant: starSizes.height).isActive = true
+            button.widthAnchor.constraint(equalToConstant: starSizes.width).isActive = true
                 
         //Setup the button action
             button.addTarget(self, action: #selector(retingButtonTapped(button:)), for: .touchUpInside)
