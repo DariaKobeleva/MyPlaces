@@ -155,7 +155,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-DI-sLr" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-DI-sLr" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="70.666666666666686" y="48" width="252" height="44"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
@@ -214,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZKa-2u-Urx">
-                                <rect key="frame" x="0.0" y="178" width="393" height="699"/>
+                                <rect key="frame" x="0.0" y="133" width="393" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="103" id="QgE-DH-bHv" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -287,7 +287,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="tV7-2D-RE0">
-                                <rect key="frame" x="0.0" y="139" width="393" height="32"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Name"/>
@@ -303,7 +303,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZKa-2u-Urx" secondAttribute="trailing" id="5NJ-uS-SyL"/>
                             <constraint firstAttribute="trailing" secondItem="ZKa-2u-Urx" secondAttribute="trailing" id="XeB-DU-dkp"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ZKa-2u-Urx" secondAttribute="bottom" constant="-59" id="gu0-ce-L3f"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZKa-2u-Urx" secondAttribute="bottom" constant="-34" id="gu0-ce-L3f"/>
                             <constraint firstItem="ZKa-2u-Urx" firstAttribute="top" secondItem="tV7-2D-RE0" secondAttribute="bottom" constant="8" id="oRz-6G-RVn"/>
                             <constraint firstItem="ZKa-2u-Urx" firstAttribute="leading" secondItem="sK8-FX-K8j" secondAttribute="leading" id="waC-G4-uW9"/>
                             <constraint firstItem="ZKa-2u-Urx" firstAttribute="leading" secondItem="sK8-FX-K8j" secondAttribute="leading" id="xoD-tI-fGv"/>
@@ -369,6 +369,11 @@
             <point key="canvasLocation" x="879" y="-753"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="2Hn-DI-sLr">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="bxL-FE-jjF"/>
     </inferredMetricsTieBreakers>
