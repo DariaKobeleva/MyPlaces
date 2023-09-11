@@ -197,13 +197,14 @@
                         <outlet property="placeLocation" destination="F7t-An-BL7" id="Ho7-dY-GHM"/>
                         <outlet property="placeName" destination="Mnu-vq-xEb" id="LWG-OC-wah"/>
                         <outlet property="placeType" destination="dek-gS-Sbh" id="B5f-9M-L3R"/>
+                        <outlet property="ratingControl" destination="2Hn-DI-sLr" id="hkR-jr-56W"/>
                         <outlet property="saveButton" destination="KtA-zI-H9g" id="DBl-ob-qyj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBL-iN-QwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="opP-ja-t9d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="963" y="-21"/>
+            <point key="canvasLocation" x="962.59541984732823" y="-21.126760563380284"/>
         </scene>
         <!--My Places -->
         <scene sceneID="nTg-bg-Txn">
@@ -232,47 +233,57 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9km-49-y7h">
-                                                    <rect key="frame" x="96" y="8" width="281" height="87"/>
+                                                    <rect key="frame" x="96" y="8" width="171" height="87"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foI-QH-OnV">
-                                                            <rect key="frame" x="0.0" y="0.0" width="281" height="30.666666666666668"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="171" height="30.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-oT-cT6">
-                                                            <rect key="frame" x="0.0" y="33.666666666666664" width="281" height="25.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="33.666666666666664" width="171" height="25.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OV-nL-LRk">
-                                                            <rect key="frame" x="0.0" y="62" width="281" height="25"/>
+                                                            <rect key="frame" x="0.0" y="62" width="171" height="25"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="oy1-0N-DM6" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="275" y="44.666666666666664" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="6Vk-Tp-mzt"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="highlightedStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="O3y-VZ-neE" firstAttribute="leading" secondItem="El5-or-i6L" secondAttribute="leading" constant="15" id="IAV-8j-31Z"/>
-                                                <constraint firstItem="O3y-VZ-neE" firstAttribute="top" secondItem="El5-or-i6L" secondAttribute="top" constant="19" id="IGa-Ju-hA6"/>
-                                                <constraint firstItem="O3y-VZ-neE" firstAttribute="leading" secondItem="El5-or-i6L" secondAttribute="leading" constant="15" id="Pzn-G4-u9J"/>
-                                                <constraint firstItem="9km-49-y7h" firstAttribute="leading" secondItem="O3y-VZ-neE" secondAttribute="trailing" constant="16" id="UC0-KD-ryu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oy1-0N-DM6" secondAttribute="trailing" constant="8" id="P8W-kQ-03o"/>
                                                 <constraint firstAttribute="bottom" secondItem="O3y-VZ-neE" secondAttribute="bottom" constant="19" id="XUo-93-sVz"/>
-                                                <constraint firstAttribute="bottom" secondItem="O3y-VZ-neE" secondAttribute="bottom" constant="19" id="dXS-ox-8Av"/>
+                                                <constraint firstItem="oy1-0N-DM6" firstAttribute="centerY" secondItem="El5-or-i6L" secondAttribute="centerY" id="d5q-dj-NaM"/>
                                                 <constraint firstItem="O3y-VZ-neE" firstAttribute="top" secondItem="El5-or-i6L" secondAttribute="top" constant="19" id="dqU-mv-S13"/>
                                                 <constraint firstAttribute="bottom" secondItem="9km-49-y7h" secondAttribute="bottom" constant="8" id="hrJ-Ve-OzF"/>
+                                                <constraint firstItem="oy1-0N-DM6" firstAttribute="leading" secondItem="9km-49-y7h" secondAttribute="trailing" constant="8" id="nY0-ok-zck"/>
                                                 <constraint firstItem="9km-49-y7h" firstAttribute="leading" secondItem="O3y-VZ-neE" secondAttribute="trailing" constant="16" id="pi2-Ve-Fbw"/>
-                                                <constraint firstItem="9km-49-y7h" firstAttribute="leading" secondItem="O3y-VZ-neE" secondAttribute="trailing" constant="16" id="reJ-FN-zCj"/>
-                                                <constraint firstItem="O3y-VZ-neE" firstAttribute="centerY" secondItem="El5-or-i6L" secondAttribute="centerY" id="sEc-89-INR"/>
-                                                <constraint firstItem="O3y-VZ-neE" firstAttribute="leading" secondItem="El5-or-i6L" secondAttribute="leading" constant="15" id="svM-b3-p9m"/>
-                                                <constraint firstAttribute="trailing" secondItem="9km-49-y7h" secondAttribute="trailing" constant="16" id="uMV-gS-CJW"/>
                                                 <constraint firstItem="9km-49-y7h" firstAttribute="top" secondItem="El5-or-i6L" secondAttribute="top" constant="8" id="wig-bV-m3r"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="oy1-0N-DM6" id="KsB-Uf-dFd"/>
                                             <outlet property="imageOfPlace" destination="O3y-VZ-neE" id="lRw-EF-Do2"/>
                                             <outlet property="locationLabel" destination="Mwv-oT-cT6" id="FWq-D1-30u"/>
                                             <outlet property="nameLabel" destination="foI-QH-OnV" id="XeL-OZ-lSm"/>
@@ -373,6 +384,9 @@
         <designable name="2Hn-DI-sLr">
             <size key="intrinsicContentSize" width="252" height="44"/>
         </designable>
+        <designable name="oy1-0N-DM6">
+            <size key="intrinsicContentSize" width="90" height="14"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="bxL-FE-jjF"/>
@@ -380,6 +394,8 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="highlightedStar" width="237.5" height="238"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
